@@ -16,7 +16,6 @@ public class Avalos {
     }
     public static String ingresarEstado(){
         Scanner sc = new Scanner(System.in);
-        boolean condicion=true;
         String estado="";
         while(true) {
             System.out.println("Ingrese si quiere la habitacion reservarla (R), usarla con alimentacion(OA) o usarla sin alimentacion (OS)");
@@ -30,9 +29,19 @@ public class Avalos {
         }
         return estado;
     }
-    public static String [][] hacerReserva(String[][]Piezas, int numeroPieza, String estado){
+    public static String ingresarDias(){
+        String dias="0";
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de dias a reservar: ");
+        dias = sc.next();
+        return dias;
+
+
+    }
+    public static String [][] hacerReserva(String[][]Piezas, int numeroPieza, String estado, String dias){
         if(verDisponibilidad(numeroPieza,Piezas)){
             Piezas[1][numeroPieza]=estado;
+            Piezas[2][numeroPieza]=dias;
         }
         else if (verDisponibilidad(numeroPieza,Piezas)==false) {
             System.out.println("La pieza no esta disponible");
