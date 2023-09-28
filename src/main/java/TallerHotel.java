@@ -1,11 +1,10 @@
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TallerHotel {
     public static void main(String[] args) {
-        String[][] matriz = crearHotel();
-        rellenarMatriz(matriz);
-        consultarEstado(matriz);
+        menu();
     }
 
     public static String[][] crearHotel() {
@@ -33,14 +32,22 @@ public class TallerHotel {
 
     public static void menu() {
         Scanner entrada = new Scanner(System.in);
-        int opcion;
+        int opcion = 0;
+        String[][] matriz = crearHotel();
+        rellenarMatriz(matriz);
 
         do {
             opcionesAdmin();
-            opcion = entrada.nextInt();
+            try {
+                opcion = entrada.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.print("El parámetro de entrada debe ser un número, intente de nuevo.\n");
+                throw e;
+            }
 
             switch (opcion) {
                 case 1:
+                    consultarEstado(matriz);
                     break;
                 case 2:
                     break;
