@@ -3,16 +3,16 @@ import java.util.Scanner;
 
 public class TallerHotel {
     public static void main(String[] args) {
-        String[][] matriz = crearMatriz();
+        String[][] matriz = crearHotel();
         rellenarMatriz(matriz);
-        consultarMatriz(matriz);
+        consultarEstado(matriz);
     }
 
-    public static String[][] crearMatriz() {
+    public static String[][] crearHotel() {
         return new String[3][10];
     }
 
-    public static void consultarMatriz(String[][] matriz) {
+    public static void consultarEstado(String[][] matriz) {
         System.out.println("Habitaciones: ");
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
