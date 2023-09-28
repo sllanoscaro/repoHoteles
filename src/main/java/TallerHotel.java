@@ -53,21 +53,18 @@ public class TallerHotel {
                     // método para reservar habitación
                     break;
                 case 3:
-                    // método para desocupar habitación
+                    // método para desocupar y pagar habitación
                     break;
                 case 4:
-                    // método para pagar habitación
-                    break;
-                case 5:
                     rellenarMatriz(matriz);
                     break;
-                case 6:
+                case 5:
                     System.out.print("Saliendo del programa...");
                     break;
                 default:
                     System.out.println("Opción no válida. Por favor, elija una opción válida.");
             }
-        }  while (opcion != 6);
+        }  while (opcion != 5);
         entrada.close();
     }
 
@@ -75,10 +72,9 @@ public class TallerHotel {
         System.out.println("Menu administrador:");
         System.out.println("1. Ver habitaciones disponibles.");
         System.out.println("2. Reservar una habitación.");
-        System.out.println("3. Desocupar una habitación.");
-        System.out.println("4. Pagar habitación.");
-        System.out.println("5. Reiniciar hotel.");
-        System.out.println("6. Salir.");
+        System.out.println("3. Desocupar y pagar una habitación.");
+        System.out.println("4. Reiniciar hotel.");
+        System.out.println("5. Salir.");
         System.out.print("Elija una opción: ");
     }
 }
