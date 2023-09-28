@@ -155,7 +155,7 @@ public class Avalos {
                 default:
                     System.out.println("Opción no válida. Por favor, elija una opción válida.");
             }
-        }  while (opcion != 6);
+        }  while (opcion != 5);
         entrada.close();
     }
 
