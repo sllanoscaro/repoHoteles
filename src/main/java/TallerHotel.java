@@ -50,12 +50,16 @@ public class TallerHotel {
                     consultarEstado(matriz);
                     break;
                 case 2:
+                    // método para reservar habitación
                     break;
                 case 3:
+                    // método para desocupar habitación
                     break;
                 case 4:
+                    // método para pagar habitación
                     break;
                 case 5:
+                    rellenarMatriz(matriz);
                     break;
                 case 6:
                     System.out.print("Saliendo del programa...");
@@ -71,11 +75,10 @@ public class TallerHotel {
         System.out.println("Menu administrador:");
         System.out.println("1. Ver habitaciones disponibles.");
         System.out.println("2. Reservar una habitación.");
-        System.out.println("3. Ocupar una habitación.");
-        System.out.println("4. Desocupar habitación.");
+        System.out.println("3. Desocupar una habitación.");
+        System.out.println("4. Pagar habitación.");
         System.out.println("5. Reiniciar hotel.");
         System.out.println("6. Salir.");
         System.out.print("Elija una opción: ");
     }
-
 }
